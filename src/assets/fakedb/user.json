@@ -1,0 +1,22 @@
+{
+    "userlist":[
+        {
+            "id": 10684731,
+            "firstName": "Aswin",
+            "lastName": "Kumar",
+            "username": "aswinkumar@lnt",
+            "role": "roleid-1",
+            "token": "",
+            "password":"admin"
+        },
+        {
+            "id": 10684732,
+            "firstName": "Ashok",
+            "lastName": "Kumar",
+            "username": "ashokumar@lnt",
+            "role": "roleid-2",
+            "token": "",
+            "password":"manager"
+        }
+    ]
+}

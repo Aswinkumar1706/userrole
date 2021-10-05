@@ -1,0 +1,292 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/all.min.css";
+
+.theme-header-bg-light {
+    background-color: #0068BB !important;
+}
+body{
+background-color: #E7E9ED ;
+}
+button:disabled {
+  cursor:no-drop;
+}
+.inline-btn-group button{
+margin-left: 0.75rem;
+}
+.content-wrapper{
+margin-top: calc(4.5rem + 1px);
+min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
+}
+.wrapper .main-header {
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+z-index: 1037;
+box-shadow: 0px 8px 4px rgb(0 0 0 / 14%);
+}
+.content-wrapper,.main-header,.main-footer {
+// transition: margin-left .3s ease-in-out;
+// transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+margin-left: 230px;
+}
+.language-chose-btn{
+border-radius: 30%;
+}
+.language-chose-btn:last-child > .btn {
+border-top-left-radius: 2rem;
+border-bottom-left-radius: 2rem;
+}
+.language-chose-btn:first-child > .btn {
+border-top-right-radius: 2rem;
+border-bottom-right-radius: 2rem;
+}
+.language-chose-btn>.btn-secondary.active {
+background-color: #fff !important;
+color: #0068BB!important;
+border-color: #4c89bb;
+}
+.language-chose-btn> .btn-secondary {
+background-color: #4c89bb;
+color: #fff;
+border-color: #4c89bb;
+:active,:hover,:focus{
+    border-color: #4c89bb!important;;  
+}
+
+}
+/***2-sidebar**/
+.app-sidebar {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+width: 230px;
+overflow: auto;
+z-index: 10;
+background-color: #fff;
+-webkit-box-shadow: 0px 8px 17px rgb(0 0 0 / 20%);
+box-shadow: 0px 8px 17px rgb(0 0 0 / 20%);
+
+}
+.app-sidebar::before {
+// transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+width: 230px;
+}
+.sidebar-collapse .sidebar-mini .app-sidebar:hover {
+overflow: visible;
+}
+.app-sidebar .brand-link {
+// border-bottom: 1px solid #4b545c;
+background: #1A77C1;
+color: #B8D5EC;
+box-shadow: 0px 8px 4px rgb(0 0 0 / 14%);
+}
+.brand-link {
+display: block;
+font-size: 1.25rem;
+line-height: 1.5;
+padding: 1rem .5rem;
+transition: width .3s ease-in-out;
+white-space: nowrap;
+
+}
+.brand-link:hover {
+color: #B8D5EC;
+text-decoration: none;
+}
+.layout-fixed .brand-link {
+width: 230px;
+}
+.app-menu {
+margin-bottom: 0;
+padding-bottom: 40px;
+}
+
+.list-unstyled, .app-nav, .app-menu, .treeview-menu {
+padding-left: 0;
+list-style: none;
+}
+.sidebar-collapse .sidebar-mini .app-menu__item {
+overflow: hidden;
+}
+.treeview.is-expanded{
+border-left-color: #58577E;
+background: #fff;
+}
+
+.app-menu__item {
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+padding: 12px 15px;
+font-size: 1.08em;
+border-left: 3px solid transparent;
+-webkit-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+-o-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+transition: border-left-color 0.3s ease, background-color 0.3s ease;
+color: #58577E;
+border-bottom: 1px solid #a9a9a9;
+}
+.sidebar-collapse .sidebar-mini .treeview:hover .app-menu__item {
+overflow: visible;
+background: #0d1214;
+border-left-color: #58577E;
+color: #fff;
+}
+.app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
+background: #fff;
+border-left-color: #516DBB;
+text-decoration: none;
+color: #516DBB;
+}
+.app-menu__label {
+white-space: nowrap;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+}
+.app-menu__icon {
+-webkit-box-flex: 0;
+-ms-flex: 0 0 auto;
+flex: 0 0 auto;
+width: 25px;
+}
+.sidebar-collapse .sidebar-mini .treeview:hover .app-menu__label {
+opacity: 1;
+text-align: left;
+}
+.sidebar-collapse .sidebar-mini .treeview .app-menu__label {
+border-bottom-right-radius: 0;
+}
+.sidebar-collapse .sidebar-mini .app-menu__label {
+display: block;
+position: absolute;
+top: 0;
+left: 50px;
+min-width: 180px;
+padding: 25px 5px 12px 20px;
+margin-left: 1.30rem;
+line-height: 1;
+opacity: 0;
+background: #0d1214;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+.sidebar-collapse .sidebar-mini .treeview:hover .treeview-menu {
+max-height: 100vh;
+opacity: 1;
+visibility: visible;
+z-index: 10;
+margin-left: 1.5rem;
+}
+.sidebar-collapse .sidebar-mini .app-menu__item:hover + .treeview-menu {
+visibility: visible;
+}
+.sidebar-collapse .sidebar-mini .treeview-menu {
+position: absolute;
+left: 50px;
+min-width: 180px;
+padding: 12px 0;
+opacity: 0;
+border-bottom-right-radius: 4px;
+z-index: 9;
+visibility: hidden;
+-webkit-transition: visibility 0.3s ease;
+-o-transition: visibility 0.3s ease;
+transition: visibility 0.3s ease;
+}
+.treeview.is-expanded .treeview-menu {
+max-height: 100vh;
+}
+.treeview-menu {
+max-height: 0;
+overflow: hidden;
+-webkit-transition: max-height 0.3s ease;
+-o-transition: max-height 0.3s ease;
+transition: max-height 0.3s ease;
+// background: #2a383e;
+background:#fff;
+}
+.treeview-indicator {
+-webkit-transform-origin: center;
+-ms-transform-origin: center;
+transform-origin: center;
+-webkit-transition: -webkit-transform 0.3s ease;
+transition: -webkit-transform 0.3s ease;
+-o-transition: transform 0.3s ease;
+transition: transform 0.3s ease;
+transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.treeview.is-expanded .treeview-indicator {
+-webkit-transform: rotate(
+90deg
+);
+-ms-transform: rotate(90deg);
+transform: rotate(
+90deg
+);
+}
+
+.treeview-item {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+padding: 5px 5px 5px 20px;
+font-size: 1em;
+// color: #fff;;
+color:#2a383e;
+}
+.treeview-item .icon {
+margin-right: 5px;
+}
+.treeview-item.active, .treeview-item:hover, .treeview-item:focus {
+// background: #fff;
+// border-left: 3px solid #516DBB;
+// text-decoration: none;
+// color: #516DBB;
+background: #7d8fc3;
+    border-right: 3px solid #516DBB;
+    text-decoration: none;
+    color: #fff;
+    
+}
+.treeview.is-expanded [data-toggle='treeview'] {
+border-left-color: #516DBB;
+background: #fff;
+color: #516DBB;
+}
+
+.sidebar-collapse .content-wrapper, .sidebar-collapse .main-footer,.sidebar-collapse .main-header {
+margin-left: 4.6rem!important;
+}
+.sidebar-collapse .app-sidebar {
+left: 0;
+width: 4.6rem;
+overflow: hidden;
+//transition: margin-left .3s ease-in-out;
+}
+.sidebar-collapse .app-menu__item{
+display: block;
+text-align: center;
+padding: 14px 11px;
+.treeview-indicator{
+    display: none;
+}
+} 
+
+.main-footer {
+background-color: #dee2e6;
+border-top: 1px solid #6c757d;
+color: #343a40;
+padding: 0.75rem;
+font-size: 0.75rem;
+//  transition: margin-left .3s ease-in-out;
+}

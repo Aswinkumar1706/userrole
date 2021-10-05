@@ -1,0 +1,42 @@
+
+
+<aside class="app-sidebar">
+    <a href="javascript:void(0)" class="brand-link"  data-toggle="sidebar">
+        <i class="fas fa-bars"></i>
+      </a>
+     
+    <ul class="app-menu" >
+        <li class="treeview" *ngFor = "let menuItem of menuData" >
+            <a class="app-menu__item" href="" data-toggle="treeview"
+            >
+             <i class="app-menu__icon fa fa-laptop"></i>
+            <span class="app-menu__label">{{menuItem.menuName}}</span>
+            <i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li *ngFor="let smenu of menuItem.submenu">
+                  <a class="treeview-item" (click)="setAction(smenu.actions)" [routerLink]="smenu.pageurl" routerLinkActive="active"><i class="icon fa fa-circle-o" ></i>{{smenu.menuName}}</a>
+                </li>
+             
+            </ul>
+          </li>
+        <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i>
+            <span class="app-menu__label">Master</span>
+            <i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" routerLink="/home" routerLinkActive="active-link"><i class="icon fa fa-circle-o"></i>Jiko Corp Act Entry </a></li>
+              <li><a class="treeview-item"routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 2</a></li>
+              <li><a class="treeview-item"routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 3</a></li>
+              <li><a class="treeview-item" routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 4</a></li>
+            </ul>
+          </li>
+          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Entry</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 1</a></li>
+              <li><a class="treeview-item" routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 2</a></li>
+              <li><a class="treeview-item" routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 3</a></li>
+              <li><a class="treeview-item" routerLink=""><i class="icon fa fa-circle-o"></i>Submenu 4</a></li>
+            </ul>
+          </li> -->
+          <!-- <pre>{{menuData | json}}</pre> -->
+    </ul>
+</aside>

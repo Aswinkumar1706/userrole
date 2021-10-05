@@ -1,0 +1,52 @@
+<nav class="main-header navbar navbar-expand-lg navbar-light theme-header-bg-light ">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">
+            <img src="../../../assets/bank.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Logoname
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item">
+              <div class="btn-group btn-toggle language-chose-btn" data-toggle="buttons">
+                <button type="button"  [ngClass]="{'active':language == 'default'}" class="btn btn-secondary" (click)="setLanguage('default')">Default</button>
+                <button type="button"  [ngClass]="{'active':language == 'english'}" class="btn btn-secondary" (click)="setLanguage('english')">English</button>
+              </div>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2" href="" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="far fa-bell text-white"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-1 mx-1 py-3 my-n2" href="" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fas fa-cog text-white"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-1 mx-1 py-3 my-n2" href="" target="_blank" rel="noopener" aria-label="Slack">
+                <i class="far fa-question-circle text-white"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-item nav-link dropdown-toggle mr-md-2 text-white" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <div class="d-inline-flex">
+                        <p class="m-0"><small>welcome </small><b>{{userData.id}}</b></p>
+                      <img src="../../../assets/user.png" width="30" height="30" class="ml-3" alt="...">
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-md-right " aria-labelledby="bd-versions">
+                  <a class="dropdown-item active" href="javascript:void(0)"><small></small><b>{{userData.id}}</b></a>
+                 <p>{{userData.firstName}}{{userData.lastName}}</p>
+                 <p>{{userData.username}}</p>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)" (click)="logout()">Logout</a>
+                </div>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </nav>

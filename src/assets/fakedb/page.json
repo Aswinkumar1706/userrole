@@ -1,0 +1,41 @@
+{
+    "pagelist":[
+        {
+            "pageid":"1",
+            "icon":"",
+            "url":"/submenu1",
+            "status":true
+        },
+        {
+            "pageid":"2",
+            "icon":"",
+            "url":"/submenu2",
+            "status":true
+        },
+        {
+            "pageid":"3",
+            "icon":"",
+            "url":"/submenu3",
+            "status":true
+        },
+        {
+            "pageid":"4",
+            "icon":"",
+            "url":"/submenu4",
+            "status":true
+        },
+        {
+            "pageid":"5",
+            "icon":"",
+            "url":"/submenu5",
+            "status":true
+        },
+        {
+            "pageid":"6",
+            "icon":"",
+            "url":"/submenu6",
+            "status":true
+        }
+
+    ]
+}
